@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web/LandingPage/LandingPage.dart';
 import 'package:flutter_web/Navbar/Navbar.dart';
 
 void main() {
@@ -12,14 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: "Montserrat"
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Montserrat"),
       home: MyHomePage(),
     );
   }
-}class MyHomePage extends StatelessWidget {
+}
+
+class MyHomePage extends StatelessWidget {
   const MyHomePage({Key key}) : super(key: key);
 
   @override
@@ -27,22 +27,17 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-            colors: [
+            gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [
               Color.fromRGBO(195, 20, 50, 1.0),
               Color.fromRGBO(36, 11, 54, 1.0)
-            ]
-          )
-        ),
+            ])),
         child: Column(
-          children: <Widget>[
-            Navbar()
-          ],
+          children: <Widget>[Navbar(), LandingPage()],
         ),
       ),
     );
   }
 }
-
