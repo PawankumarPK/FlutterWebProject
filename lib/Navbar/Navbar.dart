@@ -83,6 +83,39 @@ class MobileNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Text(
+            "Agami Sports",
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "Home",
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(
+                width: 30,
+              ),
+              Text(
+                "About Us",
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(
+                width: 30,
+              ),
+              Text(
+                "Portfolio",
+                style: TextStyle(color: Colors.white),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
